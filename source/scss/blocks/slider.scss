@@ -13,11 +13,36 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.swiper-slide-next, .swiper-slide-active {
+  opacity: 1 !important;
+}
+
 .slider__item {
   display: flex;
   flex-direction: column;
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
+  opacity: 0;
+
+  transition: opacity 600ms ease-in-out 50ms;
+
+  //.swiper-slide-next & {
+  //  opacity: 1 !important;
+  //}
+  //
+  //.swiper-slide-active & {
+  //  opacity: 1 !important;
+  //}
 
   @media (min-width: $stop-scaling) {
     padding: 146px 40px 100px 97px;
